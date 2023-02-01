@@ -9,11 +9,26 @@
   
   body {
     margin: 0;
+    background-color: #37505C;
   }
+
+  h1 {
+    font-size: 54px;
+    text-transform: uppercase;
+}
+
+.container{
+    color: goldenrod;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+}
   
   .board {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 60vh;
     display: grid;
     justify-content: center;
     align-content: center;
@@ -25,7 +40,7 @@
   .cell {
     width: var(--cell-size);
     height: var(--cell-size);
-    border: 1px solid black;
+    border: 1px solid goldenrod;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,7 +82,7 @@
   .board.x .cell:not(.x):not(.circle):hover::before,
   .board.x .cell:not(.x):not(.circle):hover::after,
   .board.circle .cell:not(.x):not(.circle):hover::before {
-    background-color: lightgrey;
+    background-color: whitesmoke;
   }
   
   .cell.x::before,
@@ -109,7 +124,7 @@
   .board.circle .cell:not(.x):not(.circle):hover::after {
     width: calc(var(--mark-size) * .7);
     height: calc(var(--mark-size) * .7);
-    background-color: white;
+    background-color: #37505C;
   }
   
   .winning-message {
